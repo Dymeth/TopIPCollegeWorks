@@ -19,7 +19,7 @@ public record Time(int hours, int minutes, int seconds) {
         long total = (long) hours * SECONDS_IN_HOUR + (long) minutes * SECONDS_IN_MINUTE + seconds;
 
         if (total < 0) throw new IllegalArgumentException("Время не может быть отрицательным. Дано " + total + " сек");
-        if (total / SECONDS_IN_HOUR > Integer.MAX_VALUE) throw new IllegalArgumentException("Слишком большое значение времени");
+        if (total > Integer.MAX_VALUE) throw new IllegalArgumentException("Слишком большое значение времени");
 
         this.hours = (int) (total / SECONDS_IN_HOUR);
         this.minutes = (int) (total % SECONDS_IN_HOUR / SECONDS_IN_MINUTE);
