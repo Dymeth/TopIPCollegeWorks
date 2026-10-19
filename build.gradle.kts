@@ -19,3 +19,24 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
+allprojects {
+    val javaVersion = 25
+    val charset = Charsets.UTF_8
+
+    apply(plugin = "java")
+    apply(plugin = "java-library")
+
+    java {
+        sourceCompatibility = JavaVersion.toVersion(javaVersion)
+        targetCompatibility = JavaVersion.toVersion(javaVersion)
+        toolchain {
+            languageVersion.set(JavaLanguageVersion.of(javaVersion))
+        }
+    }
+
+    tasks.withType<JavaCompile> {
+        options.release.set(javaVersion)
+        options.encoding = charset.name()
+    }
+}
