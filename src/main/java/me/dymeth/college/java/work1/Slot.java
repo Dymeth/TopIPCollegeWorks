@@ -1,4 +1,4 @@
-package me.dymeth.college.java;
+package me.dymeth.college.java.work1;
 
 import java.util.Objects;
 

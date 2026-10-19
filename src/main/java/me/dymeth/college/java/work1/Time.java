@@ -1,4 +1,4 @@
-package me.dymeth.college.java;
+package me.dymeth.college.java.work1;
 
 /**
  * 2.Класс Time с полями hours, minutes, seconds и конструкторами:

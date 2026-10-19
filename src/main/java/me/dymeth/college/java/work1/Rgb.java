@@ -1,4 +1,4 @@
-package me.dymeth.college.java;
+package me.dymeth.college.java.work1;
 
 /**
  * 1.Класс Rgb с полями r, g, b (0–255) и тремя конструкторами:
